@@ -1,0 +1,13 @@
+<%- include("./partials/header.ejs") %>
+<div class="container w-full h-[80%] flex items-center justify-center">
+    <div class="loginpanel">
+        <h3 class="text-2xl font-semibold mb-4">Login</h3>
+        <form action="/login" method="post" class="flex flex-col gap-2 items-start">
+            <input class="px-3 py-2 border-[1.5px] border-zinc-300 rounded-md outline-none" type="text" placeholder="Email or Username" name="email">
+            <input class="px-3 py-2 border-[1.5px] border-zinc-300 rounded-md outline-none" type="password" placeholder="password" name="password">
+            <input class="px-3 py-2 bg-blue-500 text-white rounded-md" type="submit" value="Login">
+        </form>
+        <a class="text-blue-500 inline-block mt-5" href="/register">Don't have an account</a>
+    </div>
+</div>
+<%- include("./partials/footer.ejs") %>

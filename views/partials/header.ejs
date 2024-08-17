@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khaatabook</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+    <div class="nav flex items-center justify-between px-20 py-10">
+        <h3>Khaatabook</h3>
+        <% var error = typeof error !== "undefined" ? error : "" %>
+        <% if(error.length > 0){%>
+            <div class="px-3 py-2 bg-red-500 rounded-md absolute top-10 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                <h3 class="text-red-300">
+                    <%= error %>
+                </h3>
+            </div>
+        <%} %>
+        <% var loggedin = typeof loggedin !== "undefined" ? loggedin : true %>
+        <% if(loggedin){%>
+            <div class="flex gap-8">
+                <a href="/">Home</a>
+                <a href="/hisaab/create">Create New Hisaab</a>
+                <a class="text-red-500" href="/logout">Logout</a>
+            </div>
+        <%} %>
+       
+    </div>
